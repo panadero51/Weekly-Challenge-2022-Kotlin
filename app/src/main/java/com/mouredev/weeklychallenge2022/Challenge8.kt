@@ -16,25 +16,3 @@ package com.mouredev.weeklychallenge2022
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  *
  */
-
-fun main() {
-    println(decimalToBinary(387))
-    println(decimalToBinary(0))
-}
-
-fun decimalToBinary(decimal: Int): String {
-
-    var number = decimal
-    var binary = ""
-
-    while (number != 0) {
-
-        val reminder = number % 2
-        number /= 2
-
-        binary = "$reminder$binary"
-    }
-
-    return binary.ifEmpty { "0" }
-}
-
